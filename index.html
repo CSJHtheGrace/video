@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<script src="js/jquery-1.11.2.min.js"></script>
+<link rel="stylesheet" href="css/index.css">
+<title>사이트</title>
+</head>
+
+<body>
+    <nav>
+        <button data-lavel="all" class="active">전체</button>
+        <button data-lavel="lavel1">Too good</button>
+        <button data-lavel="lavel2">부메랑(한국)</button>
+        <button data-lavel="lavel3">The Club(한국)</button>
+        <button data-lavel="lavel4">열정</button>
+        <button data-lavel="lavel5">한번 더, OK?</button>        
+        <button data-lavel="lavel6">Dancer In The Rain</button>
+        <button data-lavel="lavel7">부메랑(일본)</button>
+        <button data-lavel="lavel8">The Club(일본)</button>
+        <button data-lavel="lavel9">Sweet Flower</button>        
+        <button data-lavel="lavel10">Juicy Love</button>
+        <button data-lavel="lavel11">Piranha</button>
+        <button data-lavel="lavel12">One More Time, OK</button>
+        <button data-lavel="lavel13">Stand Up People</button>
+        <button data-lavel="lavel14">Here</button>
+        <button data-lavel="lavel15">Near</button>
+        <button data-lavel="lavel16">少しでいいから</button>
+    </nav>
+
+    <script>
+        $('nav button').on('click', function()
+        {
+            $(this).addClass('active');
+            $(this).siblings('button').removeClass('active');
+
+            if ( $(this).attr('data-lavel') == 'all' )
+            {
+                $('li').show();
+            }
+            else
+            {
+                $('.' + $(this).attr('data-lavel')).siblings('li').hide();
+                $('.' + $(this).attr('data-lavel')).show();
+            }
+        });
+
+        function youtube() 
+        {
+            youtubeXhr = new XMLHttpRequest();
+            youtubeXhr.open('GET', 'https://noembed.com/embed?url=https://www.youtube.com/watch?v=' + arguments[0], 0);
+            youtubeXhr.send();
+            youtubeUrl = 'https://youtu.be/' + arguments[0];
+            youtubeTitle = youtubeXhr.responseText.split('"title":"')[1].split('"')[0];
+            youtubeHqImage = youtubeXhr.responseText.split('"thumbnail_url":"')[1].split('"')[0];
+            
+            document.write('<a href=' + youtubeUrl + ' target="_blank"><i><img src=' + youtubeHqImage + '></i><strong>' + youtubeTitle + '</strong></a>');
+        }
+
+        $(document).ready(function() { $('html').addClass('active'); $('html, body').scrollTop(0); });
+    </script>
+
+    <ul>
+        <li class="lavel1"><script>youtube('-Z3z10GFJ-0');</script></li>
+        <li class="lavel1"><script>youtube('YWmLTNoAwYI');</script></li>
+        <li class="lavel1"><script>youtube('Ssbpc9OdX48');</script></li>
+        <li class="lavel1"><script>youtube('O1ClF2qbhw8');</script></li>    
+        <li class="lavel1"><script>youtube('B6d9XxWAk8g');</script></li>      
+        <li class="lavel1"><script>youtube('zaI-vWYj4PA');</script></li>      
+        <li class="lavel1"><script>youtube('VeFIwyP_RGA');</script></li>      
+        <li class="lavel1"><script>youtube('nsm7dRxD-7o');</script></li>
+        <li class="lavel1"><script>youtube('o19vwd5ocTo');</script></li>
+        <li class="lavel1"><script>youtube('0W1ZNdklzHg');</script></li>   
+        <li class="lavel1"><script>youtube('Qa1xQuq5W1k');</script></li>
+        <li class="lavel1"><script>youtube('ONCWmTKCV-U');</script></li>
+
+        <li class="lavel2"><script>youtube('2brKC0mz1Sk');</script></li>
+        <li class="lavel2"><script>youtube('KDbwpAMvDSc');</script></li>
+        <li class="lavel2"><script>youtube('GTr0c7urNzk');</script></li>
+        <li class="lavel2"><script>youtube('4p3h6ZSfzpA');</script></li>
+        <li class="lavel2"><script>youtube('F5jWJ9Tjr3c');</script></li>
+        <li class="lavel2"><script>youtube('JHihIUVEUeg');</script></li>
+        <li class="lavel2"><script>youtube('Ix7SLryg0yc');</script></li>
+        <li class="lavel2"><script>youtube('Q8CG0bPBFr0');</script></li>
+        <li class="lavel2"><script>youtube('MSwCSZ5Km94');</script></li>
+        <li class="lavel2"><script>youtube('KppT8T5mYc4');</script></li>
+        <li class="lavel2"><script>youtube('3De_Kn7_NEM');</script></li>
+        <li class="lavel2"><script>youtube('LX7XLMCTlI0');</script></li>
+        <li class="lavel2"><script>youtube('LKoxZ22DjfA');</script></li>
+        <li class="lavel2"><script>youtube('6CwDdgS1VV0');</script></li>
+        <li class="lavel2"><script>youtube('fY5vXSUvQZ8');</script></li>
+
+        <li class="lavel3"><script>youtube('fVRoMm17Tbw');</script></li>
+        <li class="lavel3"><script>youtube('KaKT2A9WV7s');</script></li>
+        <li class="lavel3"><script>youtube('IbfdImd-3jM');</script></li>
+        <li class="lavel3"><script>youtube('izAyJdpJ2A4');</script></li>
+        <li class="lavel3"><script>youtube('ePQWGcErh_0');</script></li>
+        <li class="lavel3"><script>youtube('Esjdh8XWDS0');</script></li>
+        <li class="lavel3"><script>youtube('O937cmArFHg');</script></li>
+        <li class="lavel3"><script>youtube('vphzgg-cENw');</script></li>
+
+        <li class="lavel4"><script>youtube('ZSuOWnXVKE8');</script></li>
+        
+        <li class="lavel5"><script>youtube('RWxfIKrlufE');</script></li>
+        <li class="lavel5"><script>youtube('6OkNU0BjaQQ');</script></li>
+        <li class="lavel5"><script>youtube('USwmX1oicrQ');</script></li>
+        <li class="lavel5"><script>youtube('kyldU-KZW1U');</script></li>
+        <li class="lavel5"><script>youtube('Cwi1gbspJ4Y');</script></li>
+
+        <li class="lavel6"><script>youtube('ecb4yF8aajU');</script></li>
+
+        <li class="lavel7"><script>youtube('5J3vqIQv_ug');</script></li>
+        <li class="lavel7"><script>youtube('zHa5Zn7ZNyU');</script></li>
+        <li class="lavel7"><script>youtube('kuWCkdhiJ1Y');</script></li>
+
+        <li class="lavel8"><script>youtube('MV2VEbxfhbM');</script></li>
+        <li class="lavel8"><script>youtube('nXhnwfCWi40');</script></li>
+        <li class="lavel8"><script>youtube('nYThT2ljCxs');</script></li>
+
+        <li class="lavel9"><script>youtube('bqpHHBbBq6U');</script></li>
+        <li class="lavel10"><script>youtube('ADgx5DYEgsk');</script></li>
+        <li class="lavel11"><script>youtube('g3J2E0RlK74');</script></li>
+        <li class="lavel12"><script>youtube('wnoaiLqPFjE');</script></li>
+        <li class="lavel13"><script>youtube('XK7VfBk9N6w');</script></li>
+        <li class="lavel14"><script>youtube('kp47YPoDmwU');</script></li>
+        <li class="lavel15"><script>youtube('Gso-XvKdS40');</script></li>
+        <li class="lavel16"><script>youtube('hUCg7cP-tLE');</script></li>
+    </ul>
+</body>
+</html>
