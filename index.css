@@ -162,16 +162,19 @@ select::-ms-expand {
   --cl:#fff;
   --lh: 1.8;
   --width1: 180rem;
-  --width2: calc(100% - 6rem);
+  --width2: calc(100% - 4rem);
   --list1: 6;
   --list2: 3rem;
 }
 
 nav {
+  overflow: hidden;
+  overflow-x: auto;
   width: var(--width1);
   max-width: var(--width2);
-  margin: 0 auto;
-  padding: 5rem 0 2rem;
+  margin: 0 auto 2rem;
+  padding: 3rem 0 0;
+  white-space: nowrap;
 }
 nav button {
   margin: 0 0 1rem;
@@ -197,7 +200,7 @@ ul {
   width: var(--width1);
   max-width: var(--width2);
   margin: 0 auto;
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
   grid-template-columns: repeat(var(--list1), 1fr);
   gap: var(--list2);
 }
@@ -330,6 +333,7 @@ html.active::after {
 }
 @media (max-width: 600px) {
   :root {
+    --sz: 1.4rem;
     --list1: 2;
   }
 }
