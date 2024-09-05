@@ -6,10 +6,26 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <link rel="stylesheet" href="index.css">
-<title>천상지희 더 그레이스 영상 모음</title>
+<title>천상지희 비디오 아카이브</title>
 </head>
 
 <body>
+    <header>
+        <h1>천상지희 비디오 아카이브</h1>
+
+        <p>
+            <button>인스타그램</button>
+            <span>
+                <a href="https://www.instagram.com/maomaomi84/" target="_blank">대장</a>
+                <a href="https://instagram.com/persodana" target="_blank">디양</a>
+                <a href="https://www.instagram.com/sunday040728" target="_blank">순대</a>
+                <a href="https://www.instagram.com/stephanie_kim" target="_blank">막내</a>
+            </span>
+        </p>
+
+        <a href="https://gall.dcinside.com/board/lists/?id=thegrace" target="_blank"><img src="https://nstatic.dcinside.com/dc/w/images/dcin_logo.png" alt="디시인사이드 천상지희 갤러리"><small>천상지희 갤러리</small></a>
+    </header>
+
     <nav>
         <button data-lavel="all" class="active">전체</button>
         <button data-lavel="lavel1">Too good</button>
@@ -31,15 +47,14 @@
     </nav>
 
     <script>
+        $('header button').on('click', function() { $(this).parent('p').toggleClass('active'); });
+
         $('nav button').on('click', function()
         {
             $(this).addClass('active');
             $(this).siblings('button').removeClass('active');
 
-            if ( $(this).attr('data-lavel') == 'all' )
-            {
-                $('li').show();
-            }
+            if ( $(this).attr('data-lavel') == 'all' ) { $('li').show(); }
             else
             {
                 $('.' + $(this).attr('data-lavel')).siblings('li').hide();
